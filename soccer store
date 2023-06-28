@@ -1,0 +1,26 @@
+create table soccerstore(id integer primary key,name text,price integer,aisle integer,sales integer);
+
+insert into soccerstore values(1, "soccer balls", 30,3,300);
+insert into soccerstore values(2, "goal net", 10,4,100);
+insert into soccerstore values(3, "gloves", 15,3,85);
+insert into soccerstore values(4, "bottles",5, 2, 150);
+insert into soccerstore values(5, "shin gaurds",12,5,360);
+insert into soccerstore values(6, "jersey", 55,1, 50);
+insert into soccerstore values(7, "cleats", 200,1,600);
+insert into soccerstore values(8, "undershirt",20,4,300);
+insert into soccerstore values(9, "tape", 15,8, 400);
+insert into soccerstore values(10, "mini goal", 60,10,200);
+insert into soccerstore values(11, "brace", 45, 8,62);
+insert into soccerstore values(12, "backpack", 15, 7,273);
+insert into soccerstore values(13, "cones", 4,7,1000);
+insert into soccerstore values(14, "air pump", 18,6,190);
+insert into soccerstore values(15, "ball bag", 15,8,360);
+
+display items where the price is greater than $10 and order them by aisle.
+select * from soccerstore where price >10 order by aisle;
+
+displays the order from the least amount sold to the most.
+select * from soccerstore order by sales;
+
+displays how much items were sold in total.
+select sum(sales) from soccerstore
